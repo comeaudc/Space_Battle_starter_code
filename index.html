@@ -18,30 +18,66 @@
                 <div class="nameBox">USS Schwarzenegger</div>
                 <div class="playerImage"></div>
                 <div class="playerStats">
-
-                Hull : 15 <br>
-                FirePower : 5 <br>
-                Accuracy : .7 <br>
-
-z
+    
+                <h4>Hull : <span id="USHull">20</span></h4>
+                <h4>FirePower : 5</h4>
+                <h4>Accuracy : .7 </h4>
 
                 </div>
 
         </div>
-
+        
+        <button id="1" onclick="attack(this.id)">Attack?</button>
 
         <div class="mainCharacterView right">
            
-            <div class="nameBox">Enemy</div>
+            <div id="alienNameBox" class="nameBox">Enemy</div>
             <div class="enemyImage"></div>
                 <div class="enemyStats">
-                    Hull : 6 <br>
-                    FirePower : 3 <br>
-                    Accuracy : .6 <br>
+
+                    <h4>Hull : <span id="alienHull">0</span></h4>
+                    <h4>FirePower : <span id="aFirepower">0</span></h4>
+                    <h4>Accuracy : <span id="aAccuracy">0</span> </h4>
     
     
                 </div>
             
         </div>
+        <div id="popup">
+            <div class="modal-header">
+                <div class="banner"></div>
+                <button data-close-button class="close-button">&times;</button>
+            </div>
+            <div class="modal-body">
+                <h3>Would you like to retreat?</h3>
+                <button onclick="giveUp()">Yes</button>
+                <button id="0" onclick="attack(this.id)">NEVER!<button>
+            </div>
+        </div>
+        <div id="retreat">
+            <div class="modal-header">
+                <div class="banner" id="winOrLose"></div>
+                <button data-close-button onclick="popClose()" class="close-button">&times;</button>
+            </div>
+            <div id="modal-body2">
+                <h2 id="choice"></h2>
+                <h3 id="fate"></h3>
+                <button onclick="location.reload();">Try Again?</button>
+            </div>
+        </div>
+        <div id="moves">
+            <div class="modal-header">
+                <div class="banner">You Shot at the alien ship!</div>
+            </div>
+            <div class="modal-body">
+                <h2 id="usMove"></h2>
+                <h2 id="theyShoot"></h2>
+                <h2 id="theyMove"></h2>
+                <h2 id="destroyed"></h2>
+            </div>
+        </div>    
+        <div id="overlay"></div>
+    </div>
+        
 </body>
 </html>
