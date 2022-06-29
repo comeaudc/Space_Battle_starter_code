@@ -15,7 +15,7 @@
     <div class="bodyContainer">
 
         <div class="mainCharacterView left" >
-                <div class="nameBox">USS Schwarzenegger</div>
+                <div class="nameBox">USS Assembly</div>
                 <div class="playerImage"></div>
                 <div class="playerStats">
     
@@ -27,7 +27,7 @@
 
         </div>
         
-        <button id="1" onclick="attack(this.id)">Attack?</button>
+        <button id="1" onclick="attack(this.id)">Press To Begin War</button>
 
         <div class="mainCharacterView right">
            
@@ -46,30 +46,27 @@
         <div id="popup">
             <div class="modal-header">
                 <div class="banner"></div>
-                <button data-close-button class="close-button">&times;</button>
             </div>
             <div class="modal-body">
-                <h3>Would you like to retreat?</h3>
-                <button onclick="giveUp()">Yes</button>
-                <button id="0" onclick="attack(this.id)">NEVER!<button>
+                <h2>Would you like to retreat?</h2>
+                <button id="0" onclick="attack(this.id)">NEVER!</button>
+                <button onclick="giveUp()">Yes...</button>
             </div>
         </div>
         <div id="retreat">
             <div class="modal-header">
                 <div class="banner" id="winOrLose"></div>
-                <button data-close-button onclick="popClose()" class="close-button">&times;</button>
             </div>
             <div id="modal-body2">
                 <h2 id="choice"></h2>
                 <h3 id="fate"></h3>
+                <h3 id="lives"></h3>
                 <button onclick="location.reload();">Try Again?</button>
             </div>
         </div>
         <div id="moves">
-            <div class="modal-header">
-                <div class="banner">You Shot at the alien ship!</div>
-            </div>
             <div class="modal-body">
+                <h2>You Shot at the Alien Ship...</h2>
                 <h2 id="usMove"></h2>
                 <h2 id="theyShoot"></h2>
                 <h2 id="theyMove"></h2>
@@ -77,6 +74,8 @@
             </div>
         </div>    
         <div id="overlay"></div>
+        <div id="confetti"></div>
+        <div id="explosion"></div>
     </div>
         
 </body>

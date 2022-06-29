@@ -23,12 +23,6 @@ flex-direction: column;
 justify-content: space-around;
 align-items: center;
 }
-.left{
-
-}
-.right{
-    
-}
 
 .nameBox{
     border: 1px solid black;
@@ -113,6 +107,12 @@ align-items: center;
     max-width: 80%;
     height:  300px;
     max-height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+
 }
 
 #popup.active {
@@ -121,9 +121,11 @@ align-items: center;
 
 .modal-header {
     padding: 10px 15px;
-    display: flex;
+    /* display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; */
+    text-align: center;
+    text-decoration: underline;
 }
 
 .modal-header .banner {
@@ -131,23 +133,23 @@ align-items: center;
     font-weight: bold;
 }
 
-.modal-header .close-button {
-    cursor: pointer;
-    border: none;
-    outline: none;
-    background: none;
-    font-size: 2rem;
-    font-weight: bold;
-}
-
 .modal-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     padding: 10px 15px;
     text-align: center;
 }
 
 #modal-body2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     padding: 10px 15px;
     text-align: center;
+    max-height: 100%;
 }
 
 #overlay {
@@ -170,9 +172,12 @@ align-items: center;
 .bodyContainer > button {
     height: 20px;
     position: fixed;
-    transform: translate(-50%, -50%);
+    transform: translate(-56%, -50%);
     left: 50%;
     top: 50%;
+    height: 100px;
+    max-width: 200px;
+    font-weight: 600;
 }
 
 #retreat {
@@ -189,6 +194,7 @@ align-items: center;
     max-width: 80%;
     height:  300px;
     max-height: 80%;
+    font-weight: 500;
 }
 
 #retreat.active {
@@ -209,8 +215,66 @@ align-items: center;
     max-width: 80%;
     height:  300px;
     max-height: 80%;
+    font-weight: 500;
 }
 
 #moves.active {
     transform: translate(-50%, -50%) scale(1);
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    background-color: black;
+    color: white;
+    padding: 15px 15px;
+    box-shadow: 0px 0px 20px 10px white;
+    margin: 15px;
+    cursor: pointer;
+}
+
+button:hover{
+    opacity: 60%;
+}
+
+h2{
+    margin: 13px;
+}
+
+#confetti {
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("images/confetti-40.gif");
+    transition: 100ms ease-in-out;
+    pointer-events: none;    /* when over lay invisible, wont capture click events    */
+}
+
+#confetti.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+#explosion {
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("images/explosion.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: 100ms ease-in-out;
+    pointer-events: none;    /* when over lay invisible, wont capture click events    */
+}
+
+#explosion.active {
+    opacity: 1;
+    pointer-events: all;
 }
